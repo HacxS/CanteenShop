@@ -1,0 +1,25 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+    PAYING | PAYTM
+{% endblock %}
+
+{% block content %}
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+<table align="center" style="border: 1px solid black;padding: 5px;">
+	
+	{% for key,value in paytm.items %}
+	    <tr><td>{{key}} </td><td> {{value}} </td></tr>
+	{% endfor %}
+
+</table>
+
+{% endblock %}

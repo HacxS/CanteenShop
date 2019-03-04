@@ -1,0 +1,21 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+    PAYING | PAYTM
+{% endblock %}
+
+{% block content %}
+<h1>Please Wait<br> Please Do Not Refresh The Page</h1></br>
+<form method="post" action="https://securegw-stage.paytm.in/theia/processTransaction" name="f1">
+<table border="1">
+<tbody>
+{% for key,value in paytmdict.items %}
+    <input type="hidden" name="{{key}}" value="{{value}}">
+{% endfor %}
+</tbody>
+</table>
+<script type="text/javascript">
+document.f1.submit();
+</script>
+</form>
+{% endblock %}
